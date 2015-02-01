@@ -7,7 +7,6 @@ call vundle#rc()
 
 Bundle 'gmarik/Vundle.vim'
 
-Bundle 'vim-scripts/Conque-Shell'
 Bundle 'Shougo/vimproc.vim'
 
 Bundle 'scrooloose/syntastic'
@@ -16,6 +15,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-multiple-cursors'
+
 Bundle 'Lokaltog/vim-easymotion'
    map <C-f> <Plug>(easymotion-s)
 

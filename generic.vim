@@ -9,11 +9,17 @@ augroup END
 
 vmap <C-c> "+y
 vmap <C-x> "+c<ESC>
+
 vmap <C-S-v> c<ESC>"+p
 imap <C-S-v> <C-r><C-o>+
-noremap  <C-S>      :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+
+noremap  <C-s>      :update<CR>
+vnoremap <C-s> <C-c>:update<CR>
+inoremap <C-s> <C-o>:update<CR>
+
+noremap  <C-z>      :undo<CR>
+vnoremap <C-z> <C-c>:undo<CR>
+inoremap <C-z> <C-o>:undo<CR>
 
 com! W w
 com! Q q
