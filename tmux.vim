@@ -1,11 +1,9 @@
-Bundle 'jgdavey/tslime.vim'
-   vmap <silent> <F5> <Plug>SendSelectionToTmux
-   nmap <silent> <F5> <Plug>NormalModeSendToTmux
+vmap <silent> <F5> <Plug>SendSelectionToTmux
+nmap <silent> <F5> <Plug>NormalModeSendToTmux
 
-Bundle 'christoomey/vim-tmux-navigator'
-   let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_no_mappings = 1
 
-   nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
-   nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-   nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-   nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>

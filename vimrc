@@ -3,7 +3,7 @@ filetype off
 " General {{{
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 
@@ -47,8 +47,24 @@ Bundle 'Lokaltog/vim-powerline'
    let g:Powerline_symbols = 'fancy'
    set laststatus=2   " Always show the statusline
 
+Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'int3/vim-extradite'
+Bundle 'vim-scripts/gitignore'
+
+Bundle 'JuliaLang/julia-vim'
+
+Bundle 'jgdavey/tslime.vim'
+
+Bundle 'christoomey/vim-tmux-navigator'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 source $HOME/.vim/generic.vim
 source $HOME/.vim/color.vim
 source $HOME/.vim/git.vim
 source $HOME/.vim/tmux.vim
+source $HOME/.home.vim
 

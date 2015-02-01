@@ -1,9 +1,8 @@
-Bundle 'altercation/vim-colors-solarized'
-   set background=dark
-   try
-      colorscheme solarized
-   catch
-   endtry
+set background=dark
+try
+   colorscheme solarized
+catch
+endtry
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes

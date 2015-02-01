@@ -1,7 +1,3 @@
-Bundle 'tpope/vim-fugitive'
-Bundle 'int3/vim-extradite'
-Bundle 'vim-scripts/gitignore'
-
 let g:extradite_width = 60
 " Hide messy Ggrep output and copen automatically
 function! NonintrusiveGitGrep(term)

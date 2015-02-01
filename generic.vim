@@ -104,9 +104,6 @@ set mouse=a
 
 syntax enable
 
-filetype plugin on
-filetype indent on
-
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
