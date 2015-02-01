@@ -19,4 +19,4 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "installing packages"
-vim -T dumb +BundleInstall! +BundleClean! +VimProcInstall +qall
+vim -T dumb +BundleInstall! +BundleClean! +VimProcInstall +qall -
