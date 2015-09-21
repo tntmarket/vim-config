@@ -1,26 +1,27 @@
 filetype off
 
-" General {{{
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Bundle 'gmarik/Vundle.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
-Bundle 'Shougo/vimproc.vim'
+Plug 'scrooloose/syntastic'
 
-Bundle 'scrooloose/syntastic'
+Plug 'tpope/vim-commentary'
+   autocmd FileType matlab set commentstring=%\ %s
 
-Bundle 'tpope/vim-commentary'
-Bundle 'godlygeek/tabular'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'terryma/vim-multiple-cursors'
+Plug 'junegunn/vim-easy-align'
+   vmap <Enter> <Plug>(EasyAlign)
+   nmap ga <Plug>(EasyAlign)
+   let g:easy_align_delimiters = {'$': { 'pattern': '\$' } }
 
-Bundle 'Lokaltog/vim-easymotion'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'Lokaltog/vim-easymotion'
    map <C-f> <Plug>(easymotion-s)
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
    " Close nerdtree after a file is selected
    let NERDTreeQuitOnOpen = 1
 
@@ -37,34 +38,45 @@ Bundle 'jistr/vim-nerdtree-tabs'
    endfunction
    noremap <silent> <F3> :call ToggleFindNerd()<CR>
 
-Bundle 'vim-scripts/Gundo'
+Plug 'vim-scripts/Gundo'
    noremap <silent> <F4> :GundoToggle<CR>
 
-Bundle 'majutsushi/tagbar'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+
+Plug 'majutsushi/tagbar'
    noremap <silent> <F7> :TagbarToggle<CR>
 
-Bundle 'Lokaltog/vim-powerline'
-   let g:Powerline_symbols = 'fancy'
-   set laststatus=2   " Always show the statusline
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py' }
 
-Bundle 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+   let g:airline_left_sep = ''
+   let g:airline_left_alt_sep = ''
+   let g:airline_right_sep = ''
+   let g:airline_right_alt_sep = ''
+   set laststatus=2
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'int3/vim-extradite'
-Bundle 'vim-scripts/gitignore'
+Plug 'altercation/vim-colors-solarized'
 
-Bundle 'JuliaLang/julia-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'int3/vim-extradite'
+Plug 'vim-scripts/gitignore'
 
-Bundle 'jgdavey/tslime.vim'
+Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 
-Bundle 'christoomey/vim-tmux-navigator'
+Plug 'jgdavey/tslime.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+filetype plugin indent on
 
 source $HOME/.vim/generic.vim
 source $HOME/.vim/color.vim
 source $HOME/.vim/git.vim
 source $HOME/.vim/tmux.vim
-source $HOME/.home.vim
+source $HOME/.vim/haskell.vim
+" source $HOME/.home.vim
 

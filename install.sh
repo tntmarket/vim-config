@@ -14,9 +14,9 @@ echo "linking .vimrc and .gvimrc"
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 
-echo "installing vundle"
-mkdir -p ~/.vim/bundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo "installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "installing packages"
-vim -T dumb +BundleInstall! +BundleClean! +VimProcInstall +qall -
+vim -T dumb +PlugInstall! +PlugClean! +qall -

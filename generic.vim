@@ -33,7 +33,7 @@ set foldnestmax=5
 set foldlevelstart=99
 set foldcolumn=0
 
-set colorcolumn=80
+set colorcolumn=72
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -75,10 +75,10 @@ set cmdheight=1
 set backspace=eol,start,indent
 
 " Ignore case when searching
-set ignorecase
+" set ignorecase
 
 " When searching try to be smart about cases
-set smartcase
+" set smartcase
 
 set hlsearch
 set incsearch
@@ -99,6 +99,7 @@ set noerrorbells
 set noeb vb t_vb=
 
 map <silent> <leader>r :redraw!<CR>
+map <silent> <leader>nh :noh<CR>
 
 set mouse=a
 
@@ -194,7 +195,7 @@ endfunc
 
 augroup whitespace
   autocmd!
-  autocmd BufWrite *.hs :call DeleteTrailingWS()
+  autocmd BufWrite * :call DeleteTrailingWS()
 augroup END
 
 " magic that allows ctrl commands to get through
