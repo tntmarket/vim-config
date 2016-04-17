@@ -33,7 +33,7 @@ set foldnestmax=5
 set foldlevelstart=99
 set foldcolumn=0
 
-set colorcolumn=72
+set colorcolumn=80
 
 " Sets how many lines of history VIM has to remember
 set history=700
